@@ -7,8 +7,9 @@
 /*
  * Design system — Hassan Wali portfolio.
  *
- * Dark-first: the :root values ARE the dark theme (this site has no light
- * mode). Accent is electric blue, matching the neon in Hassan's portrait.
+ * Warm editorial: cream paper background, warm ink text and a single burnt
+ * orange accent. Serif (Fraunces) display headings over a humanist sans body.
+ * The :root values ARE the theme (this site has no light/dark toggle).
  */
 
 @theme inline {
@@ -42,60 +43,60 @@
   /* Site-specific tokens */
   --color-surface: var(--surface);
   --color-accent-glow: var(--accent-glow);
-  --font-display: "Space Grotesk", "DM Sans", sans-serif;
+  --font-display: "Fraunces", "DM Sans", Georgia, serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
-  --shadow-glow: 0 0 40px -12px color-mix(in oklab, var(--primary) 55%, transparent);
-  --shadow-card: 0 10px 40px -20px rgb(0 0 0 / 0.8);
+  --shadow-glow: 0 10px 30px -14px color-mix(in oklab, var(--primary) 40%, transparent);
+  --shadow-card: 0 10px 30px -18px rgb(58 44 28 / 0.28);
 }
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.1179 0 0);            /* #0a0a0a */
-  --foreground: oklch(0.97 0 0);
-  --card: oklch(0.156 0.004 260);             /* #111111 + a touch of blue */
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.156 0.004 260);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.623 0.214 259.815);      /* #3B82F6 electric blue */
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.21 0.01 260);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.21 0.01 260);
-  --muted-foreground: oklch(0.68 0.015 260);
-  --accent: oklch(0.623 0.214 259.815);
-  --accent-foreground: oklch(0.98 0 0);
+  --background: oklch(0.975 0.008 84);        /* warm cream paper */
+  --foreground: oklch(0.25 0.02 50);          /* warm ink */
+  --card: oklch(0.993 0.004 90);              /* near-white warm card */
+  --card-foreground: oklch(0.25 0.02 50);
+  --popover: oklch(0.993 0.004 90);
+  --popover-foreground: oklch(0.25 0.02 50);
+  --primary: oklch(0.59 0.14 45);             /* burnt orange */
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: oklch(0.93 0.015 85);          /* warm tan */
+  --secondary-foreground: oklch(0.25 0.02 50);
+  --muted: oklch(0.94 0.012 84);
+  --muted-foreground: oklch(0.48 0.028 60);
+  --accent: oklch(0.59 0.14 45);
+  --accent-foreground: oklch(0.98 0.01 85);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.97 0 0 / 8%);
-  --input: oklch(0.97 0 0 / 12%);
-  --ring: oklch(0.623 0.214 259.815);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.875 0.018 80);
+  --input: oklch(0.875 0.018 80);
+  --ring: oklch(0.59 0.14 45);
 
   /* Site-specific tokens */
-  --surface: oklch(0.1459 0 0);               /* #111111 */
-  --accent-glow: oklch(0.623 0.214 259.815 / 25%);
+  --surface: oklch(0.945 0.012 85);           /* deeper cream for alternating sections */
+  --accent-glow: oklch(0.59 0.14 45 / 13%);
 }
 
 /* Kept for the shadcn variant contract — mirrors :root above. */
 .dark {
-  --background: oklch(0.1179 0 0);
-  --foreground: oklch(0.97 0 0);
-  --card: oklch(0.156 0.004 260);
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.156 0.004 260);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.623 0.214 259.815);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.21 0.01 260);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.21 0.01 260);
-  --muted-foreground: oklch(0.68 0.015 260);
-  --accent: oklch(0.623 0.214 259.815);
-  --accent-foreground: oklch(0.98 0 0);
+  --background: oklch(0.975 0.008 84);
+  --foreground: oklch(0.25 0.02 50);
+  --card: oklch(0.993 0.004 90);
+  --card-foreground: oklch(0.25 0.02 50);
+  --popover: oklch(0.993 0.004 90);
+  --popover-foreground: oklch(0.25 0.02 50);
+  --primary: oklch(0.59 0.14 45);
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: oklch(0.93 0.015 85);
+  --secondary-foreground: oklch(0.25 0.02 50);
+  --muted: oklch(0.94 0.012 84);
+  --muted-foreground: oklch(0.48 0.028 60);
+  --accent: oklch(0.59 0.14 45);
+  --accent-foreground: oklch(0.98 0.01 85);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.97 0 0 / 8%);
-  --input: oklch(0.97 0 0 / 12%);
-  --ring: oklch(0.623 0.214 259.815);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.875 0.018 80);
+  --input: oklch(0.875 0.018 80);
+  --ring: oklch(0.59 0.14 45);
 }
 
 @layer base {

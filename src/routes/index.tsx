@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 
-import portrait from "@/assets/hassan-wali-portrait.png.asset.json";
+import portrait from "@/assets/hassan-wali-portrait.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -334,7 +334,7 @@ function Hero() {
               className="absolute -inset-3 rounded-3xl bg-accent-glow blur-2xl"
             />
             <img
-              src={portrait.url}
+              src={portrait}
               alt="Hassan Wali, full stack web developer"
               className="relative w-full rounded-3xl border border-border object-cover shadow-card"
               loading="eager"
