@@ -7,8 +7,8 @@
 /*
  * Design system — Hassan Wali portfolio.
  *
- * Dark editorial: near-black warm background, soft off-white text and a
- * single burnt-orange accent. Serif (Fraunces) display headings over a
+ * Dark editorial: near-black cool background, soft off-white text and a
+ * single cobalt-blue accent. Serif (Fraunces) display headings over a
  * humanist sans body. The :root values ARE the theme (no light/dark toggle).
  */
 
@@ -51,52 +51,57 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.145 0.005 60);        /* near-black, warm */
-  --foreground: oklch(0.955 0.006 85);        /* soft off-white */
-  --card: oklch(0.185 0.005 60);
-  --card-foreground: oklch(0.955 0.006 85);
-  --popover: oklch(0.185 0.005 60);
-  --popover-foreground: oklch(0.955 0.006 85);
-  --primary: oklch(0.66 0.155 45);            /* burnt orange, lifted for dark bg */
-  --primary-foreground: oklch(0.16 0.02 45);
-  --secondary: oklch(0.25 0.01 60);
-  --secondary-foreground: oklch(0.955 0.006 85);
-  --muted: oklch(0.22 0.008 60);
-  --muted-foreground: oklch(0.68 0.015 70);
-  --accent: oklch(0.66 0.155 45);
-  --accent-foreground: oklch(0.16 0.02 45);
+  --background: oklch(0.145 0.01 260);        /* near-black, cool */
+  --foreground: oklch(0.955 0.005 250);       /* soft off-white */
+  --card: oklch(0.185 0.012 260);
+  --card-foreground: oklch(0.955 0.005 250);
+  --popover: oklch(0.185 0.012 260);
+  --popover-foreground: oklch(0.955 0.005 250);
+  --primary: oklch(0.62 0.19 255);            /* cobalt blue */
+  --primary-foreground: oklch(0.15 0.03 260);
+  --secondary: oklch(0.25 0.02 260);
+  --secondary-foreground: oklch(0.955 0.005 250);
+  --muted: oklch(0.22 0.015 260);
+  --muted-foreground: oklch(0.7 0.02 255);
+  --accent: oklch(0.62 0.19 255);
+  --accent-foreground: oklch(0.15 0.03 260);
   --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.96 0.006 85);
-  --border: oklch(0.955 0.006 85 / 10%);
-  --input: oklch(0.955 0.006 85 / 14%);
-  --ring: oklch(0.66 0.155 45);
+  --destructive-foreground: oklch(0.96 0.005 250);
+  --border: oklch(0.955 0.005 250 / 10%);
+  --input: oklch(0.955 0.005 250 / 14%);
+  --ring: oklch(0.62 0.19 255);
 
   /* Site-specific tokens */
-  --surface: oklch(0.175 0.005 60);           /* alternating sections */
-  --accent-glow: oklch(0.66 0.155 45 / 18%);
+  --surface: oklch(0.175 0.012 260);          /* alternating sections */
+  --accent-glow: oklch(0.62 0.19 255 / 18%);
 }
 
 /* Kept for the shadcn variant contract — mirrors :root above. */
 .dark {
-  --background: oklch(0.145 0.005 60);
-  --foreground: oklch(0.955 0.006 85);
-  --card: oklch(0.185 0.005 60);
-  --card-foreground: oklch(0.955 0.006 85);
-  --popover: oklch(0.185 0.005 60);
-  --popover-foreground: oklch(0.955 0.006 85);
-  --primary: oklch(0.66 0.155 45);
-  --primary-foreground: oklch(0.16 0.02 45);
-  --secondary: oklch(0.25 0.01 60);
-  --secondary-foreground: oklch(0.955 0.006 85);
-  --muted: oklch(0.22 0.008 60);
-  --muted-foreground: oklch(0.68 0.015 70);
-  --accent: oklch(0.66 0.155 45);
-  --accent-foreground: oklch(0.16 0.02 45);
+  --radius: 0.75rem;
+  --background: oklch(0.145 0.01 260);        /* near-black, cool */
+  --foreground: oklch(0.955 0.005 250);       /* soft off-white */
+  --card: oklch(0.185 0.012 260);
+  --card-foreground: oklch(0.955 0.005 250);
+  --popover: oklch(0.185 0.012 260);
+  --popover-foreground: oklch(0.955 0.005 250);
+  --primary: oklch(0.62 0.19 255);            /* cobalt blue */
+  --primary-foreground: oklch(0.15 0.03 260);
+  --secondary: oklch(0.25 0.02 260);
+  --secondary-foreground: oklch(0.955 0.005 250);
+  --muted: oklch(0.22 0.015 260);
+  --muted-foreground: oklch(0.7 0.02 255);
+  --accent: oklch(0.62 0.19 255);
+  --accent-foreground: oklch(0.15 0.03 260);
   --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.96 0.006 85);
-  --border: oklch(0.955 0.006 85 / 10%);
-  --input: oklch(0.955 0.006 85 / 14%);
-  --ring: oklch(0.66 0.155 45);
+  --destructive-foreground: oklch(0.96 0.005 250);
+  --border: oklch(0.955 0.005 250 / 10%);
+  --input: oklch(0.955 0.005 250 / 14%);
+  --ring: oklch(0.62 0.19 255);
+
+  /* Site-specific tokens */
+  --surface: oklch(0.175 0.012 260);          /* alternating sections */
+  --accent-glow: oklch(0.62 0.19 255 / 18%);
 }
 
 @layer base {
