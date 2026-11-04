@@ -15,7 +15,10 @@ import {
   X,
 } from "lucide-react";
 
-import portrait from "@/assets/hassan-wali-portrait.png";
+import portrait from "@/assets/hassan-wali-portrait-cutout.png.asset.json";
+import projectKamran from "@/assets/project-kamran-cloth-house.jpg";
+import projectBannu from "@/assets/project-bannu-masala.jpg";
+import projectNorthlinks from "@/assets/project-northlinks-broadband.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -104,6 +107,7 @@ const PROJECTS = [
     url: "https://kamranclothhouse.pk",
     domain: "kamranclothhouse.pk",
     price: "Rs 30,000",
+    image: projectKamran,
   },
   {
     name: "Bannu Masala",
@@ -111,6 +115,7 @@ const PROJECTS = [
     url: "https://bannumasala.com",
     domain: "bannumasala.com",
     price: "Rs 30,000",
+    image: projectBannu,
   },
   {
     name: "Northlinks Broadband",
@@ -118,6 +123,7 @@ const PROJECTS = [
     url: "https://northlinksbroadband.vercel.app",
     domain: "northlinksbroadband.vercel.app",
     price: "Rs 8,000",
+    image: projectNorthlinks,
   },
 ];
 
@@ -334,9 +340,9 @@ function Hero() {
               className="absolute -inset-3 rounded-3xl bg-accent-glow blur-2xl"
             />
             <img
-              src={portrait}
+              src={portrait.url}
               alt="Hassan Wali, full stack web developer"
-              className="relative w-full rounded-3xl border border-border object-cover shadow-card"
+              className="relative w-full object-contain drop-shadow-xl"
               loading="eager"
             />
           </div>
@@ -375,20 +381,17 @@ function Services() {
   );
 }
 
-function ProjectCover({ name }: { name: string }) {
-  const initial = name.charAt(0);
+function ProjectCover({ image, name }: { image: string; name: string }) {
   return (
-    <div className="relative flex h-44 items-center justify-center overflow-hidden rounded-t-2xl border-b border-border bg-gradient-to-br from-secondary via-card to-background">
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, var(--color-border) 1px, transparent 0)",
-          backgroundSize: "18px 18px",
-        }}
+    <div className="relative h-44 overflow-hidden rounded-t-2xl border-b border-border bg-surface">
+      <img
+        src={image}
+        alt={`${name} website preview`}
+        width={1088}
+        height={608}
+        loading="lazy"
+        className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.04]"
       />
-      <span className="relative font-display text-6xl font-bold text-primary/80">{initial}</span>
     </div>
   );
 }
@@ -406,7 +409,7 @@ function Projects() {
           {PROJECTS.map((project, i) => (
             <Reveal key={project.name} delay={i * 100}>
               <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
-                <ProjectCover name={project.name} />
+                <ProjectCover image={project.image} name={project.name} />
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="text-lg font-semibold text-foreground">{project.name}</h3>
